@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Searching element</title>
+    <script>
+      let data = [10, 20, 30, 40, 50, 11, 22, 33, 44, 55];
+
+      function searchElement() {
+        let item = document.getElementById("searchEl").value;
+        let item_found = false;
+        for (let i = 0; i < data.length; i++) {
+          //   console.warn(data[i]);
+          if (data[i] == item) {
+            console.warn("item found at index:", i);
+            item_found = true;
+            break;
+          }
+        }
+        if(!item_found){
+            console.warn("item not found!")
+        }
+      }
+      // console.warn(data.indexOf(10))//built-in function
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="enter the item" id="searchEl" />
+    <button onclick="searchElement()" id="search">Search</button>
+  </body>
+</html>

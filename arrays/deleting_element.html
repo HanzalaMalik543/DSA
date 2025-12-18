@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Deleting element</title>
+    <script>
+      function removeEl() {
+        let data = [10, 20, 30, 40, 50, 60, 70];
+        position = document.getElementById("position").value;
+        position = parseInt(position);
+        if (position < 0 || position > data.length - 1 || isNaN(position)) {
+          console.warn("enter a valid position");
+        } else {
+          for (let i = position; i < data.length - 1; i++) {
+            data[i] = data[i + 1];
+          }
+          data.length = data.length - 1;
+          console.warn(data);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="enter your position" />
+    <button onclick="removeEl()">Remove element</button>
+  </body>
+</html>
