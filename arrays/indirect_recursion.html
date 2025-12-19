@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Indirect Recursion</title>
+    <script>
+      let money = 100;
+      let totalApple = 0;
+      let price=100
+
+      function buyApple(x) {
+        // console.warn(x);
+        if (x >= price) {
+            console.warn("I have",x,"ruppee and",totalApple,"apples.")
+            totalApple++
+          buyMore(x);
+        } else {
+          console.warn("I have", x,"ruppee.","Total apples:", totalApple);
+        }
+      }
+      function buyMore(x) {
+        buyApple(x - price);
+        // console.warn("buy more",x);
+      }
+      buyApple(money);
+    </script>
+  </head>
+  <body>
+    <h1>Indirect Recursion</h1>
+  </body>
+</html>
