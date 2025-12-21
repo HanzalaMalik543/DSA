@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Head and Tail Recursion</title>
+    <script>
+        // function days(){
+        //     let data=20;
+        //     console.warn(data)
+        //     if(true){
+        //         console.warn(data*20)
+        //     }else{
+        //         console.warn(data/20)
+        //     }
+        // }
+        // function weeks(){
+        //     days();
+        // }
+        // function months(){
+        //     weeks()
+        // }
+        // function topFunction(){
+        //     months();
+        // }
+        // topFunction();
+
+
+        let data=5;
+        function test(x){
+            console.warn(x)
+            if(x>0){
+                test(x-1)
+            }
+            // console.warn(x)
+        }
+        test(data);
+
+    </script>
+</head>
+<body>
+    <h1>Hea and Tail Recursion</h1>
+</body>
+</html>
